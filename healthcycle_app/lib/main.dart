@@ -1,4 +1,3 @@
-// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:healthcycle_app/screens/menu/menu_screen.dart';
 
