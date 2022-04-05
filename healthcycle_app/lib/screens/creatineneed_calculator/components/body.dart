@@ -4,9 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CreatineCalculator(),
-    );
+    return const CreatineCalculator();
   }
 }
 
@@ -38,7 +36,7 @@ class _CreatineCalculatorState extends State<CreatineCalculator> {
                   "   Creatine is a substance that is found naturally in muscle cells. It helps your muscles produce energy during heavy lifting or high-intensity exercise."
                   "Taking creatine as a supplement is very popular among athletes and bodybuilders in order to gain muscle, enhance strength and improve exercise performance.",
                   style: GoogleFonts.roboto(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         color: Colors.deepPurpleAccent, letterSpacing: .5),
                   ),
                 ),
@@ -75,7 +73,7 @@ class _CreatineCalculatorState extends State<CreatineCalculator> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
+                SizedBox(
                   width: double.infinity,
                   height: 50.0,
                   child: FlatButton(
@@ -99,9 +97,9 @@ class _CreatineCalculatorState extends State<CreatineCalculator> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
+                const SizedBox(
                   width: double.infinity,
-                  child: const Text(
+                  child: Text(
                     "Your Daily Creatine Needs is :",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -113,10 +111,10 @@ class _CreatineCalculatorState extends State<CreatineCalculator> {
                 const SizedBox(
                   height: 50.0,
                 ),
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: Text(
-                    "$result",
+                    result,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 40.0,

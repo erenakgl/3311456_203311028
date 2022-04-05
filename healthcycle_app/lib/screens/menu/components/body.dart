@@ -13,9 +13,9 @@ class _BodyState extends State<Body> {
   bool isPressed = false;
   @override
   Widget build(BuildContext context) {
-    final backgroundColor = const Color(0xFFE7ECEF);
+    const backgroundColor = Color(0xFFE7ECEF);
     double blur = isPressed ? 5.0 : 30.0;
-    Offset distance = isPressed ? Offset(10, 10) : Offset(28, 28);
+    Offset distance = isPressed ? const Offset(10, 10) : const Offset(28, 28);
 
     return Scaffold(
         backgroundColor: backgroundColor,
@@ -31,7 +31,7 @@ class _BodyState extends State<Body> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeScreen())),
+                                  builder: (context) => const HomeScreen())),
                         });
               }
             }),
@@ -50,11 +50,11 @@ class _BodyState extends State<Body> {
                     BoxShadow(
                       blurRadius: blur,
                       offset: distance,
-                      color: Color(0xFFA7A9AF),
+                      color: const Color(0xFFA7A9AF),
                       inset: isPressed,
                     ),
                   ]),
-              child: SizedBox(
+              child: const SizedBox(
                 height: 200,
                 width: 200,
                 child: Icon(Icons.add_circle_outline,

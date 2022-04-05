@@ -4,6 +4,8 @@ import 'package:healthcycle_app/screens/home/home_screen.dart';
 import 'package:healthcycle_app/screens/waterneed_calculator/components/body.dart';
 
 class WaterNeedCalculatorScreen extends StatelessWidget {
+  const WaterNeedCalculatorScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +21,13 @@ class WaterNeedCalculatorScreen extends StatelessWidget {
         style: TextStyle(color: Colors.white),
       ),
       elevation: 0.0,
-      backgroundColor: Color(0xFF39285A),
+      backgroundColor: const Color(0xFF39285A),
       leading: IconButton(
         icon: SvgPicture.asset("assets/icons/back_arrow.svg",
             color: Colors.white),
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const HomeScreen()));
         },
       ),
     );

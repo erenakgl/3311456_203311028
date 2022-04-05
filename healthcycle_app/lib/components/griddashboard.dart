@@ -23,14 +23,14 @@ class GridDashboard extends StatelessWidget {
     subtitle: "Every Month",
     event: "1 Items",
     img: "assets/images/water-bottle.png",
-    widget: WaterNeedCalculatorScreen(),
+    widget: const WaterNeedCalculatorScreen(),
   );
   Items item3 = Items(
     title: "Daily Activity List",
     subtitle: "Every Dat",
     event: "5 Times",
     img: "assets/images/runner.png",
-    widget: DailyActivtyListScreen(),
+    widget: const DailyActivtyListScreen(),
   );
   Items item4 = Items(
     title: "Creatine Need Calculator",
@@ -44,14 +44,14 @@ class GridDashboard extends StatelessWidget {
     subtitle: "Every Year",
     event: "1 Times",
     img: "assets/images/skull-and-bones.png",
-    widget: LifeTimeCalculatorScreen(),
+    widget: const LifeTimeCalculatorScreen(),
   );
   Items item6 = Items(
     title: "More Information",
     subtitle: "Every Month",
     event: "3 Times",
     img: "assets/images/internet.png",
-    widget: WebPageScreen(),
+    widget: const WebPageScreen(),
   );
   Items item7 = Items(
     title: "Basal Metabolic Rate Calculator",
@@ -65,8 +65,10 @@ class GridDashboard extends StatelessWidget {
     subtitle: "Every Month",
     event: "1 Times",
     img: "assets/images/eye-care.png",
-    widget: EyeTestScreen(),
+    widget: const EyeTestScreen(),
   );
+
+  GridDashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +86,7 @@ class GridDashboard extends StatelessWidget {
     return Flexible(
       child: GridView.count(
           childAspectRatio: 1.0,
-          padding: EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.only(left: 16, right: 16),
           crossAxisCount: 2,
           crossAxisSpacing: 18,
           mainAxisSpacing: 18,
@@ -93,7 +95,7 @@ class GridDashboard extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Color(color), borderRadius: BorderRadius.circular(45)),
               child: InkWell(
-                focusColor: Color(0xFFF9F8FD),
+                focusColor: const Color(0xFFF9F8FD),
                 borderRadius: BorderRadius.circular(20),
                 onTap: () {
                   Navigator.push(context,

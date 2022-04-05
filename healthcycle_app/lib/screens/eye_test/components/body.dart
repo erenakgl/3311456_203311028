@@ -1,14 +1,11 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: WebPage(),
-    );
+    return const WebPage();
   }
 }
 
@@ -20,7 +17,6 @@ class WebPage extends StatefulWidget {
 }
 
 class _WebPageState extends State<WebPage> {
-  Completer<WebViewController> _controller = Completer<WebViewController>();
   @override
   Widget build(BuildContext context) {
     return Image.network(

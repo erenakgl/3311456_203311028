@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
             height: 0,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 16),
+            padding: const EdgeInsets.only(left: 16, right: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

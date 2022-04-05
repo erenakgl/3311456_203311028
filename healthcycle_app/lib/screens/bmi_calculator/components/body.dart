@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: BmiCalculator(),
-    );
+    return const BmiCalculator();
   }
 }
 
@@ -92,7 +90,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
+                SizedBox(
                   width: double.infinity,
                   height: 50.0,
                   child: FlatButton(
@@ -117,9 +115,9 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
+                const SizedBox(
                   width: double.infinity,
-                  child: const Text(
+                  child: Text(
                     "Your BMI is :",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -131,12 +129,12 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 const SizedBox(
                   height: 50.0,
                 ),
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: Text(
-                    "$result",
+                    result,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 40.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -168,7 +166,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
   Widget radioButton(String value, Color color, int index) {
     return Expanded(
         child: Container(
-      margin: EdgeInsets.symmetric(horizontal: 12.0),
+      margin: const EdgeInsets.symmetric(horizontal: 12.0),
       height: 80.0,
       child: FlatButton(
         color: currentindex == index ? color : Colors.grey[200],

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:healthcycle_app/screens/dailyactivity_list/components/checkbox_state.dart';
 
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: DailyActivtyList(),
-    );
+    return const DailyActivtyList();
   }
 }
 
@@ -32,16 +32,14 @@ class _DailyActivtyListState extends State<DailyActivtyList> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        body: ListView(
-          padding: EdgeInsets.all(12),
-          children: [
-            buildGroupCheckbox(allActivities),
-            Divider(color: Colors.purple),
-            ...activities.map(buildSingleCheckbox).toList(),
-          ],
-        ),
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(12),
+        children: [
+          buildGroupCheckbox(allActivities),
+          const Divider(color: Colors.purple),
+          ...activities.map(buildSingleCheckbox).toList(),
+        ],
       ),
     );
   }
@@ -52,7 +50,7 @@ class _DailyActivtyListState extends State<DailyActivtyList> {
       value: checkBox.value,
       title: Text(
         checkBox.title,
-        style: TextStyle(fontSize: 20),
+        style: const TextStyle(fontSize: 20),
       ),
       onChanged: (value) => setState(() {
             checkBox.value = value!;
@@ -66,7 +64,7 @@ class _DailyActivtyListState extends State<DailyActivtyList> {
         value: checkBox.value,
         title: Text(
           checkBox.title,
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
         ),
         onChanged: toggleGroupCheckbox,
       );
@@ -76,7 +74,9 @@ class _DailyActivtyListState extends State<DailyActivtyList> {
 
     setState(() {
       allActivities.value = value;
-      activities.forEach((activity) => activity.value = value);
+      for (var activity in activities) {
+        activity.value = value;
+      }
     });
   }
 }
