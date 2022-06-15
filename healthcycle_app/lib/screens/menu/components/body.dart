@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:healthcycle_app/screens/home/home_screen.dart';
+import 'package:healthcycle_app/screens/login/login.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class _BodyState extends State<Body> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomeScreen())),
+                                  builder: (context) =>  LoginPage())),
                         });
               }
             }),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:healthcycle_app/screens/home/home_screen.dart';
-import 'package:healthcycle_app/screens/login/home.dart';
 import 'package:healthcycle_app/screens/login/login.dart';
 import 'package:healthcycle_app/screens/menu/menu_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+        debugShowCheckedModeBanner: false,
+      home: MenuScreen(),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:healthcycle_app/screens//service/auth_service.dart';
 import 'package:healthcycle_app/screens/home/home_screen.dart';
-import 'package:healthcycle_app/screens/login/home.dart';
 import 'package:healthcycle_app/screens/login/register.dart';
 import 'package:flutter/material.dart';
 
@@ -10,10 +9,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  AuthService _authService = AuthService();
+
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
-  AuthService _authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.only(),
             child: Container(
               height: size.height * 1,
               width: size.width * 300,

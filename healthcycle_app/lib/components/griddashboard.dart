@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthcycle_app/screens/basalmetabolicrate_calculator/basalmetabolicratecalculator_screen.dart';
 import 'package:healthcycle_app/screens/bmi_calculator/bmicalculator_screen.dart';
+import 'package:healthcycle_app/screens/chart/chart_screen.dart';
 import 'package:healthcycle_app/screens/creatineneed_calculator/creatinneedcalculator_screen.dart';
 import 'package:healthcycle_app/screens/dailyactivity_list/dailyactivitylist_screen.dart';
 import 'package:healthcycle_app/screens/eye_test/eyetest_screen.dart';
@@ -10,6 +11,8 @@ import 'package:healthcycle_app/screens/waterneed_calculator/waterneedcalculator
 import 'package:healthcycle_app/screens/datareadwrite/datareadwrite_screen.dart';
 import 'package:healthcycle_app/screens/localdata_holder/localdataholder_screen.dart';
 import 'package:healthcycle_app/screens/web_page/webpage_screen.dart';
+
+import '../screens/loading_page/loading_screen.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = Items(
@@ -73,15 +76,29 @@ class GridDashboard extends StatelessWidget {
     title: "PDF Saver",
     subtitle: "Every Month",
     event: "1 Times",
-    img: "assets/images/eye-care.png",
+    img: "assets/images/document1.png",
     widget: DataReadWriteScreen(),
   );
   Items item10 = Items(
     title: "Local Data Saver",
     subtitle: "Every Month",
     event: "1 Times",
-    img: "assets/images/eye-care.png",
+    img: "assets/images/save.png",
     widget: LocalDataHolderScreen(),
+  );
+  Items item11 = Items(
+    title: "Health Datas",
+    subtitle: "Every Month",
+    event: "1 Times",
+    img: "assets/images/chart1.png",
+    widget: ChartScreen(),
+  );
+  Items item12 = Items(
+    title: "Animation Shower",
+    subtitle: "Every Month",
+    event: "1 Times",
+    img: "assets/images/animation1.png",
+    widget: LoadingScreen(),
   );
 
   GridDashboard({Key? key}) : super(key: key);
@@ -98,7 +115,9 @@ class GridDashboard extends StatelessWidget {
       item7,
       item8,
       item9,
-      item10
+      item10,
+      item11,
+      item12
     ];
     var color = 0xff453658;
     return Flexible(

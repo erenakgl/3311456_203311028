@@ -8,12 +8,11 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _passwordAgainController =
-  TextEditingController();
 
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordAgainController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   AuthService _authService = AuthService();
 
   @override
@@ -24,38 +23,32 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding:EdgeInsets.only(),
                 child: Container(
-                  height: size.height * .7,
-                  width: size.width * .85,
                   decoration: BoxDecoration(
-                      color: Colors.blue.withOpacity(.75),
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.withOpacity(.75),
-                            blurRadius: 10,
-                            spreadRadius: 2)
-                      ]),
+                      gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Colors.red, Colors.deepPurpleAccent])),
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(11.0),
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextField(
                               controller: _nameController,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                               ),
                               cursorColor: Colors.white,
                               keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.person,
+                                  Icons.person_outlined,
                                   color: Colors.white,
                                 ),
-                                hintText: 'Kullanıcı adı',
+                                hintText: 'User Name',
                                 prefixText: ' ',
                                 hintStyle: TextStyle(color: Colors.white),
                                 focusColor: Colors.white,
@@ -69,18 +62,18 @@ class _RegisterPageState extends State<RegisterPage> {
                                     )),
                               )),
                           SizedBox(
-                            height: size.height * 0.02,
+                            height: size.height *  0.04,
                           ),
                           TextField(
                               controller: _emailController,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                               ),
                               cursorColor: Colors.white,
                               keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.mail,
+                                  Icons.mail_outline_rounded,
                                   color: Colors.white,
                                 ),
                                 hintText: 'E-Mail',
@@ -97,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     )),
                               )),
                           SizedBox(
-                            height: size.height * 0.02,
+                            height: size.height * 0.04,
                           ),
                           TextField(
                               style: TextStyle(
@@ -106,12 +99,12 @@ class _RegisterPageState extends State<RegisterPage> {
                               cursorColor: Colors.white,
                               controller: _passwordController,
                               obscureText: true,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.vpn_key,
+                                  Icons.key,
                                   color: Colors.white,
                                 ),
-                                hintText: 'Parola',
+                                hintText: 'Password',
                                 prefixText: ' ',
                                 hintStyle: TextStyle(color: Colors.white),
                                 focusColor: Colors.white,
@@ -125,7 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     )),
                               )),
                           SizedBox(
-                            height: size.height * 0.02,
+                            height: size.height *  0.04,
                           ),
                           TextField(
                               style: TextStyle(
@@ -136,10 +129,10 @@ class _RegisterPageState extends State<RegisterPage> {
                               obscureText: true,
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
-                                  Icons.vpn_key,
+                                  Icons.key,
                                   color: Colors.white,
                                 ),
-                                hintText: 'Parola Tekrar',
+                                hintText: 'Password Again',
                                 prefixText: ' ',
                                 hintStyle: TextStyle(color: Colors.white),
                                 focusColor: Colors.white,
@@ -153,7 +146,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     )),
                               )),
                           SizedBox(
-                            height: size.height * 0.08,
+                            height: size.height * 0.1,
                           ),
                           InkWell(
                             onTap: () {
@@ -172,18 +165,18 @@ class _RegisterPageState extends State<RegisterPage> {
                             child: Container(
                               padding: EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white, width: 2),
+                                  border: Border.all(color: Colors.white, width: 3.5),
                                   //color: colorPrimaryShade,
                                   borderRadius:
-                                  BorderRadius.all(Radius.circular(30))),
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
+                                  BorderRadius.all(Radius.circular(5))),
+                              child: const Padding(
+                                padding: EdgeInsets.all(5.0),
                                 child: Center(
                                     child: Text(
-                                      "Kaydet",
+                                      "Register",
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 20,
+                                        fontSize: 18,
                                       ),
                                     )),
                               ),
@@ -206,8 +199,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     IconButton(
                       onPressed: () => Navigator.pop(context),
                       icon: Icon(
-                        Icons.arrow_back_ios_outlined,
-                        color: Colors.blue.withOpacity(.75),
+                        Icons.arrow_back,
+                        color: Colors.white,
                         size: 26,
                       ),
                     ),
@@ -215,10 +208,10 @@ class _RegisterPageState extends State<RegisterPage> {
                       width: size.width * 0.3,
                     ),
                     Text(
-                      "Kayıt ol",
+                      "Sign Up",
                       style: TextStyle(
                           fontSize: 20,
-                          color: Colors.blue.withOpacity(.75),
+                          color: Colors.white,
                           fontWeight: FontWeight.bold),
                     )
                   ],
