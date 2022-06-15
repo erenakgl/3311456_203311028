@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "190027567113",
+    "project_id": "my-firebase-project-5a776",
+    "storage_bucket": "my-firebase-project-5a776.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190027567113:android:0cb5c94db42033fe8668d8",
+        "android_client_info": {
+          "package_name": "com.mytappgames.healthcycle_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190027567113-rasc95lcjjdldo1ncrln277sq5mqcc9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3bG1mRRl9KqhkQ0z3qUg-7ljfS76tqb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190027567113-rasc95lcjjdldo1ncrln277sq5mqcc9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

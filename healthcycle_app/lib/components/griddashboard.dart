@@ -7,6 +7,8 @@ import 'package:healthcycle_app/screens/dailyactivity_list/dailyactivitylist_scr
 import 'package:healthcycle_app/screens/eye_test/eyetest_screen.dart';
 import 'package:healthcycle_app/screens/lifetime_calculator/lifetimecalculator_screen.dart';
 import 'package:healthcycle_app/screens/waterneed_calculator/waterneedcalculator_screen.dart';
+import 'package:healthcycle_app/screens/datareadwrite/datareadwrite_screen.dart';
+import 'package:healthcycle_app/screens/localdata_holder/localdataholder_screen.dart';
 import 'package:healthcycle_app/screens/web_page/webpage_screen.dart';
 
 class GridDashboard extends StatelessWidget {
@@ -67,6 +69,20 @@ class GridDashboard extends StatelessWidget {
     img: "assets/images/eye-care.png",
     widget: const EyeTestScreen(),
   );
+  Items item9 = Items(
+    title: "PDF Saver",
+    subtitle: "Every Month",
+    event: "1 Times",
+    img: "assets/images/eye-care.png",
+    widget: DataReadWriteScreen(),
+  );
+  Items item10 = Items(
+    title: "Local Data Saver",
+    subtitle: "Every Month",
+    event: "1 Times",
+    img: "assets/images/eye-care.png",
+    widget: LocalDataHolderScreen(),
+  );
 
   GridDashboard({Key? key}) : super(key: key);
 
@@ -81,6 +97,8 @@ class GridDashboard extends StatelessWidget {
       item6,
       item7,
       item8,
+      item9,
+      item10
     ];
     var color = 0xff453658;
     return Flexible(

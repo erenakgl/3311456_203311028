@@ -31,6 +31,16 @@ dependencies:
   flutter:
     sdk: flutter
   webview_flutter: ^3.0.1
+  http: ^0.13.4
+  path_provider: ^2.0.10
+  dio: 4.0.0
+  open_file: ^3.2.1
+  file_picker: ^4.6.1
+
+  # Firebase Database
+  firebase_core: ^1.16.0
+  firebase_auth: ^3.3.17
+  cloud_firestore: ^3.1.14
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -38,6 +48,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.3 #it helps us to use SVG
   flutter_inset_box_shadow: ^1.0.7 #inset box shadow
+  sqflite: ^2.0.2+1
 
 dev_dependencies:
   flutter_test:
